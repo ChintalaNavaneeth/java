@@ -12,7 +12,7 @@ public class fourteen {
 
         oddCells(m,n,index);
     }
-    public static int oddCells(int m, int n, int[][] indices) {
+    public static void oddCells(int m, int n, int[][] indices) {
         int ans[][] = new int[m][n];
         Arrays.fill(ans,0);
         for (int x[]:indices) {
