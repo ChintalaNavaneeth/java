@@ -32,10 +32,10 @@ public class preorder {
     public static void preordertraversal(Node root)
     {
         if (root == null) {
-            System.out.print("-1" + ",");
+//            System.out.print("-1" + ",");
             return;
         }
-        System.out.print(root.data+ " ");
+        System.out.print(root.data+ ",");
         preordertraversal(root.left);
         preordertraversal(root.right);
     }

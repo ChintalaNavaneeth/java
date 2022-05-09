@@ -42,7 +42,18 @@ public class levelorder {
         while (!q.isEmpty())
         {
             Node currNode = q.remove();
-
+            if (currNode == null)
+            {
+                System.out.println();
+                if (q.isEmpty()) break;
+                else q.add(null);
+            }
+            else
+            {
+                System.out.print(currNode.data+" ");
+                if (currNode.left != null) q.add(currNode.left);
+                if (currNode.right != null) q.add(currNode.right);
+            }
         }
 
     }
@@ -52,5 +63,6 @@ public class levelorder {
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
         System.out.println(root.data);
+        levelordertraversal(root);
     }
 }
