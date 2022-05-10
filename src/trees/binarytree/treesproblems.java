@@ -3,7 +3,7 @@ package trees.binarytree;
 
 //1 . count nodes in a tree
 //2 . SUM OF NODES
-//3 .  height if tree
+//3 . height if tree
 //4 . Max in nodes
 //5 . subtree of another subtree
 //6 . sum of nodes at k th level
@@ -97,9 +97,9 @@ public class treesproblems
     public static treeinfo diameter2(Node root) // O(n)
     {
         if (root == null) return new treeinfo(0,0);
-
         treeinfo left = diameter2(root.left);
         treeinfo right = diameter2(root.right);
+
 
         int myheight = Math.max(left.height, right.height) + 1;
 
@@ -107,6 +107,7 @@ public class treesproblems
         int daim2 = right.diameter;
 
         int mydiam = left.height + right.height + 1;
+
 
         treeinfo tre = new treeinfo(myheight,mydiam);
         return tre;
@@ -132,8 +133,8 @@ public class treesproblems
             }
             else
             {
-                if (k == h) s += curnode.data;
-//                System.out.print(curnode.data+ " ");
+                if (k == h) s+= curnode.data;
+//                    System.out.print(curnode.data+ " ");
                 if (curnode.left != null) q.add(curnode.left);
                 if (curnode.right != null) q.add(curnode.right);
             }
@@ -151,7 +152,7 @@ public class treesproblems
 //        System.out.println(maxnode(root));
 //        System.out.println(diameter(root));
 //        System.out.println(diameter2(root).diameter);
-        System.out.println(sumatk(root,2));
+//        System.out.println(sumatk(root,2));
 
 
     }
